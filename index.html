@@ -37,23 +37,26 @@
 <!-- Navbar -->
 <header>
     <nav>
-      <ul class="sidebar">
-          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Plans</a></li>
-          <li><a href="#">ROI Calculator</a></li>
-          <!-- <li><a href="#">Connect Wallet</a></li> -->
-      </ul>
-      <ul>
-          <li><a href="#">Deriv Finance</a></li>
-          <li class="hideOnMobile"><a href="#">Home</a></li>
-          <li class="hideOnMobile"><a href="#">About</a></li>
-          <li class="hideOnMobile"><a href="#">Plans</a></li>
-          <li class="hideOnMobile"><a href="#">ROI Calculator</a></li>
-          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-      </ul>
-  </nav>
+        <span class="logo">Deriv Finance</span>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label for="sidebar-active" id="overlay"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            
+            <a class="home-link" href="">Deriv Finance</a>
+            <a href="">About</a>
+            <a href="">FAQs</a>
+            <a href="">Plans</a>
+            <a href="">ROI Calculator</a>
+            <!-- <a href="">Home</a> -->
+        </div>
+    </nav>
   </header>
 
     <!-- <section class="home-banner">
@@ -763,7 +766,7 @@
     
     </div>
 
-  <script>
+<!--   <script>
   function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
@@ -773,7 +776,7 @@
             sidebar.style.display = 'none'
         }
         
-</script>
+</script> -->
 </body>
 <style>
 </html>
