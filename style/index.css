@@ -72,7 +72,7 @@ nav svg{
         display: none;
     }
     .logo{
-        background-color: var(--color-1);
+        background-color: var(--color-1)!important;
         left: 10px;
         position: absolute;
         font-size: 18px;
