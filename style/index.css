@@ -34,7 +34,7 @@ nav{
     align-items: center;
 }
 .logo{
-    display: none;
+     display: none;
 }
 .links-container{
     height: 100%;
@@ -72,9 +72,10 @@ nav svg{
         display: none;
     }
     .logo{
+        background-color: var(--color-1);
         left: 10px;
         position: absolute;
-        font-size: 24px;
+        font-size: 18px;
         color: white;
         display: block !important;
     }
