@@ -15,15 +15,17 @@ container1{
   margin: 5px;
 }
 
-
+.correction{
+    margin-left:20px;
+}
 @media only screen (max-width: 414px;){
   .overflow_scroll {
     width: 300px;
   }
 }
 
-.body1{
- margin-bottom: 10px;
+.body{
+ align-item: center;
 }
 
 nav{
