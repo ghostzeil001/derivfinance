@@ -682,6 +682,7 @@ hr{
 
 @media (max-width:700px) {
     footer{
+        padding-left: 10px;
         bottom: unset;
     }
     .col{
