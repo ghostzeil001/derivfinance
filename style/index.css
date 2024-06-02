@@ -16,6 +16,8 @@ container1{
 }
 
 .correction{
+    text-align:center;
+    align-item: center;
     margin-left:35px;
 }
 @media only screen (max-width: 414px;){
