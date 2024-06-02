@@ -29,6 +29,9 @@ container1{
 .body{
  align-item: center;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 nav{
     height: 60px;
