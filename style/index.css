@@ -43,6 +43,10 @@ nav{
 .logo{
      display: none;
 }
+.slide{
+    margin-top:40px !important;
+    height: 100vh;
+}
 .links-container{
     height: 100%;
     width: 100%;
@@ -844,6 +848,11 @@ hr{
     }
 }
 
+@media (max-width:414px) {
+    .thumbnail{
+        display:none;
+    }
+}
 
 @media (max-width:700px) {
     footer{
