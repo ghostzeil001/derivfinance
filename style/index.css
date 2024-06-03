@@ -558,7 +558,7 @@ lottie-player {
 /*footer starts  */
 footer{
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background: linear-gradient(to right, rgb(15, 15, 15), rgb(18, 70, 61));
     color: white;
