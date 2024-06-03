@@ -77,34 +77,127 @@
       </div>
       </section> -->
     <section class="home-banner">
-      <div class="container">
-        <div class="home-banner__text-section">
-          <div class="home-banner__content">
-            <div class="row justify-content-center">
-              <div class="col-xl-9 col-lg-9 col-md-12 correction">
-                <h1 class="popup1">Join The Evolution with a click.</h1>
-                <p class="popup2"><b>Step into the future of investment and portfolio management with Trust Finance. Leveraging deep fundamentals, we execute high-efficiency trades, boasting a decade-long track record of reliability and efficiency, managing portfolios totaling over £100m.
-                </b></p>
-              </div>
-            </div>
-            <!-- <h1>Get All Your Tech Fixin's In One Spot.</h1> -->
-          </div>
-          <div class="home-banner__btn">
-            <div class="popup3">
-            <a type="button" href="contact-us"
-              class="default-btn bg-white text-dark">sign up</a>
-              <a type="button" href="contact-us"
-              class="default-btn bg-white text-dark">login</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-      class="default-btn bg-white text-dark">Meet Our Expert</a> -->
-
-      <!-- <div class="home-banner__new-banner">
-          </div> -->
+       <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="img svg/neeeww.png">
+                    <div class="content">
+                        <div class="author">Deriv Finance</div>
+                        <div class="title">Join The Evolution </div>
+                        <div class="topic">with a click</div>
+                        <div class="des">
+                            <!-- lorem 50 -->
+                            Step into the future of investment and portfolio management with Trust Finance. Leveraging deep fundamentals, we execute high-efficiency trades, boasting a decade-long track record of reliability and efficiency, managing portfolios totaling over £100m.
+                        </div>
+                        <div class="buttons">
+                            <button>LOGIN</button>
+                            <button>SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img svg/instant (3).svg">
+                    <div class="content">
+                        <div class="author">Deriv Finance</div>
+                        <div class="title">Enjoy Instant withdrawal with </div>
+                        <div class="topic">Deriv Finance:</div>
+                        <div class="des">
+                            Experience swift withdrawals with Deriv Finance, even on weekends, using any of our numerous convenient withdrawal methods of your choice.
+                        </div>
+                        <div class="buttons">
+                            <button>SEE MORE</button>
+                            <button>SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img svg/instant (2).svg">
+                    <div class="content">
+                        <div class="author">Deriv Finance</div>
+                        <div class="title">Grab Your Share Of 1.9m USDT </div>
+                        <div class="topic">Reward Prize in the VIP</div>
+                        <div class="des">
+                            Become a VIP member to qualify for a share of the 1,950,000 VIP pool reward. Each VIP investment entitles you to a fair percentage of the pool reward. Join the VIP program today!
+                        </div>
+                        <div class="buttons">
+                            <button>JOIN VIP</button>
+                            <!-- <button></button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img svg/support1.svg">
+                    <div class="content">
+                        <div class="author">Deriv Finance</div>
+                        <div class="title">"Enjoy Lightning Customer Service With</div>
+                        <div class="topic">Efficient Support.</div>
+                        <div class="des">
+                            Customer Support Department available 24/7 with highly qualified staff.
+    </div>
+    <div class="buttons">
+        <button>CONTACT US</button>
+        <button>LIVE CHAT</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- list thumnail -->
+    <div class="thumbnail">
+    <div class="item">
+    <img src="img svg/neeeww.png">
+    <div class="content">
+    <div class="title">
+        Name Slider
+    </div>
+    <div class="description">
+        Description
+    </div>
+    </div>
+    </div>
+    <div class="item">
+    <img src="img svg/instant (3).svg">
+    <div class="content">
+    <div class="title">
+        Name Slider
+    </div>
+    <div class="description">
+        Description
+    </div>
+    </div>
+    </div>
+    <div class="item">
+    <img src="img svg/instant (2).svg">
+    <div class="content">
+    <div class="title">
+        Name Slider
+    </div>
+    <div class="description">
+        Description
+    </div>
+    </div>
+    </div>
+    <div class="item">
+    <img src="img svg/support1.svg">
+    <div class="content">
+    <div class="title">
+        Name Slider
+    </div>
+    <div class="description">
+        Description
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- next prev -->
+    
+    <div class="arrows">
+    <button id="prev"><</button>
+    <button id="next">></button>
+    </div>
+    <!-- time running -->
+    <div class="time"></div>
+    </div>
     </section>
 
 
@@ -693,17 +786,60 @@
     
     </div>
 
-<!--   <script>
-  function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
+<script>
+   //  start slide
+//step 1: get DOM
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
+
+let carouselDom = document.querySelector('.carousel');
+let SliderDom = carouselDom.querySelector('.carousel .list');
+let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+let timeDom = document.querySelector('.carousel .time');
+
+thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+let timeRunning = 3000;
+let timeAutoNext = 7000;
+
+nextDom.onclick = function(){
+    showSlider('next');    
+}
+
+prevDom.onclick = function(){
+    showSlider('prev');    
+}
+let runTimeOut;
+let runNextAuto = setTimeout(() => {
+    next.click();
+}, timeAutoNext)
+function showSlider(type){
+    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+    
+    if(type === 'next'){
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        carouselDom.classList.add('next');
+    }else{
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        carouselDom.classList.add('prev');
+    }
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+    }, timeRunning);
+
+    clearTimeout(runNextAuto);
+    runNextAuto = setTimeout(() => {
+        next.click();
+    }, timeAutoNext)
+}
+// end slide
         
-</script> -->
+</script>
 </body>
 <style>
 </html>
